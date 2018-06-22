@@ -4,10 +4,14 @@ public class Question {
 
     private int mTextResId;
     private boolean mAnswerTrue;
+    private boolean mAnsweredAlready;
+    private boolean mUserAnswer;
 
-    public Question(int textResId, boolean answerTrue) {
+    public Question(int textResId, boolean answerTrue, boolean answeredAlready, boolean userAnswer) {
         mTextResId = textResId;
         mAnswerTrue = answerTrue;
+        mAnsweredAlready = answeredAlready;
+        mUserAnswer = userAnswer;
     }
 
     public int getTextResId() {
@@ -24,5 +28,21 @@ public class Question {
 
     public void setAnswerTrue(boolean answerTrue) {
         mAnswerTrue = answerTrue;
+    }
+
+    public boolean isAnsweredAlready() {
+        return mAnsweredAlready;
+    }
+
+    public void setAnsweredAlready(boolean answeredAlready) {
+        mAnsweredAlready = answeredAlready;
+    }
+
+    public boolean isUserAnswer() {
+        return mUserAnswer;
+    }
+
+    public void setUserAnswer(boolean userAnswer) {
+        mUserAnswer = userAnswer;
     }
 }
